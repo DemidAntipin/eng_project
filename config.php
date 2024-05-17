@@ -1,0 +1,17 @@
+<?php
+
+session_start();
+
+$testDir = 'tests/';
+$answerDir = 'answers/';
+$deletedTestDir = 'deleted/tests/';
+$deletedAnswerDir = 'deleted/answers/';
+$admin_login = 'admin';
+$admin_password = sha1('admin');
+
+$db = new PDO('mysql:dbname=eng_project;host=127.0.0.1', 'demid', 'demid');
+
+$del_icon = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 6L6 18" stroke="white" stroke-width="2"stroke-linecap="round" stroke-linejoin="round"/><path d="M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+$errors = [];
+
